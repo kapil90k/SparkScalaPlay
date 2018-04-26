@@ -12,6 +12,7 @@ class RequestController @Inject()(config: Configuration) extends Controller {
 
   def importRules() = Action { implicit request => {
     println("************ Atleast came inside importRules************")
+    println("I am changing some text here to commit on github")
     val fileParts = request.body.asMultipartFormData.get.file("myFile")
 
     val file=fileParts.map(filePart=>{
