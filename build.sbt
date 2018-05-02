@@ -1,4 +1,5 @@
-name := """play-scala-starter-example"""
+name := """SparkScalaPlay"""
+//name := """play-scala-starter-example"""
 
 version := "0.0.1"
 
@@ -78,3 +79,16 @@ resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repos
 libraryDependencies += guice
 
 libraryDependencies += "org.fluttercode.datafactory" % "datafactory" % "0.8"
+
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.0"
+libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.2.0" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.0"
+libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.2.0"
+libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.2.0"
+libraryDependencies += "org.apache.hbase" % "hbase-client" % "1.2.0"
+libraryDependencies += "org.apache.hbase" % "hbase-server" % "1.2.0"
+libraryDependencies += "org.apache.hbase" % "hbase-common" % "1.2.0"
+libraryDependencies += "org.apache.hbase" % "hbase-hadoop2-compat" % "1.2.0"
+libraryDependencies += "org.apache.hbase" % "hbase" % "1.2.0" pomOnly()
+
+libraryDependencies += "org.apache.hbase" % "hbase-spark" % "2.0.0-alpha3"
