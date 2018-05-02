@@ -1,0 +1,38 @@
+D:
+cd D:\installation\kafka_2.11-1.0.0\bin\windows
+
+Starting Zookeeper
+	Run below command from bin\windows folder
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	zookeeper-server-start.bat ..\..\config\zookeeper.properties
+	
+Starting Kafka Broker:
+	Run below command from bin\windows folder
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	kafka-server-start.bat ..\..\config\server.properties
+	
+Starting Producer:
+	Run below command from bin\windows folder
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	kafka-console-producer.bat --broker-list localhost:9092 --topic test
+	
+Starting Consumer:
+	Run below command from bin\windows folder
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	kafka-console-consumer.bat --bootstrap-server localhost:9093 --zookeeper localhost:2181 --topic voice-topic --from-beginning --partition 1
+	
+	
+List Kafka topics
+	Run below command from bin\windows folder
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	kafka-topics.bat --list --zookeeper localhost:2181
+	
+Create new Kafka Topic
+	D:
+	cd D:\installation\kafka_2.11-1.0.0\bin\windows
+	kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic voice-topic

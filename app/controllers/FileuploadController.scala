@@ -8,7 +8,7 @@ import javax.inject.Inject
 import play.api.Configuration
 import play.api.mvc.{Action, Controller}
 
-class RequestController @Inject()(config: Configuration) extends Controller {
+class FileuploadController @Inject()(config: Configuration) extends Controller {
 
   def importRules() = Action { implicit request => {
     println("************ Atleast came inside importRules************")
@@ -64,13 +64,6 @@ class RequestController @Inject()(config: Configuration) extends Controller {
       }
     }
 
-
-  }
-
-  def testMethod() = Action { implicit request =>{
-    println("Printing something on console")
-    Ok("This is testMethod")
-  }
 
   }
 }

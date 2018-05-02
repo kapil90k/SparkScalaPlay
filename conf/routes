@@ -1,4 +1,7 @@
 # Routes
 
-POST    /practice/scala/fileUpload  controllers.RequestController.importRules()
-GET     /practice/scala/test1       controllers.RequestController.testMethod()
+#Scala Practice
+POST    /practice/scala/fileUpload  controllers.FileuploadController.importRules()
+
+#Kafka Practice
+GET     /practice/kafka/producer/generateCdr/:num   controllers.KafkaController.cdrProducer(num:Integer)

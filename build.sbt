@@ -52,6 +52,7 @@ libraryDependencies ++= Seq(
   specs2 % Test
 )
 
+libraryDependencies += "org.apache.kafka" %% "kafka" % "1.0.0"
 libraryDependencies += "com.typesafe" % "config" % "1.2.0"
 libraryDependencies += "org.json" % "json" % "20171018"
 
@@ -75,3 +76,5 @@ resolvers += "cloudera" at "https://repository.cloudera.com/artifactory/cloudera
 resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 libraryDependencies += guice
+
+libraryDependencies += "org.fluttercode.datafactory" % "datafactory" % "0.8"
