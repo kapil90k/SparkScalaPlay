@@ -10,9 +10,11 @@ import play.api.mvc.{Action, Controller}
 
 class FileuploadController @Inject()(config: Configuration) extends Controller {
 
+  /*  This method is to upload the csv file and
+  **  insert it into mysql table
+  */
+
   def importRules() = Action { implicit request => {
-    println("************ Atleast came inside importRules************")
-    println("I am changing some text here to commit on github")
     val fileParts = request.body.asMultipartFormData.get.file("myFile")
 
     val file=fileParts.map(filePart=>{
