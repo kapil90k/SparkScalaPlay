@@ -23,7 +23,7 @@ Starting Consumer:
 	Run below command from bin\windows folder
 	D:
 	cd D:\installation\kafka_2.11-1.0.0\bin\windows
-	kafka-console-consumer.bat --bootstrap-server localhost:9093 --zookeeper localhost:2181 --topic voice-topic --from-beginning --partition 1
+	kafka-console-consumer.bat --zookeeper localhost:2181 --topic voice-topic --from-beginning --partition 1
 	
 	
 List Kafka topics
